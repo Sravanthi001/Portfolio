@@ -6,6 +6,8 @@ const menuNav = document.querySelector(".menu-nav");
 
 const navItems = document.querySelectorAll(".nav-item");
 
+const blur = document.querySelector(".blur");
+
 //Set Initial State of menu
 let showMenu = false;
 
@@ -17,7 +19,9 @@ function toggleMenu() {
     menu.classList.add("show");
     menuNav.classList.add("show");
     menuBranding.classList.add("show");
+    blur.classList.add("blur_on");
     navItems.forEach(item => item.classList.add("show"));
+
     //Set menu state to true
     showMenu = true;
   } else {
@@ -25,6 +29,7 @@ function toggleMenu() {
     menu.classList.remove("show");
     menuNav.classList.remove("show");
     menuBranding.classList.remove("show");
+    blur.classList.remove("blur_on");
     navItems.forEach(item => item.classList.remove("show"));
     //Set menu state
     showMenu = false;

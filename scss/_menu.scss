@@ -1,4 +1,4 @@
-// @import "config";
+@import "config";
 // Menu button
 
 .menu-btn {
@@ -99,6 +99,7 @@
   .nav-item {
     transform: translate3d(600px, 0, 0);
     @include easeOut;
+    margin-top: 10px;
 
     &.show {
       //Slides from right

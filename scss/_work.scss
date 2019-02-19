@@ -1,0 +1,26 @@
+@import "config";
+.centerdiv {
+  position: absolute;
+  margin: auto;
+  transform: scale(0.1);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 50vh;
+  height: 30vh;
+  color: set-text-color($primary-color);
+
+  //transition: all 5s;
+  @include easeOut;
+  background: rgba(lighten($primary-color, 2), 0.8);
+  border: 1px solid #111;
+  border-radius: 10px;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+    transform: scale(1.6);
+  }
+}

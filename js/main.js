@@ -58,23 +58,33 @@ function projdesc_visable(id) {
   descDiv = document.getElementById("descdiv");
   switch (id) {
     case "proj1": {
-      divcontent = " text for proj 1 in switch ";
+      divcontent =
+        " Tourism Slack: Full Stack Website similar to slack; GitHub & gravatar integration, bot commands, re-captcha API" +
+        "Environment: WAMP Server, PHP, HTML, CSS, jQuery, JavaScript, Bootstrap, MySQL";
       break;
     }
     case "proj2": {
-      divcontent = " text for proj 2 in switch ";
+      divcontent =
+        " Voice Controlled light system:" +
+        "light system controlled using voice commands and SMS \n Environment: Arduino UNO R3, 1Sheeld";
       break;
     }
     case "proj3": {
-      divcontent = " text for proj 3 in switch ";
+      divcontent =
+        " Designed and developed a web page which gives the user the interactive interface which allows the user to" +
+        "visualize data based on popular programming languages and user account type \n Environment: Tableau, D3.js, HTML, CSS and JavaScrip";
       break;
     }
     case "proj4": {
-      divcontent = " text for proj 4 in switch ";
+      divcontent =
+        " <b> Movie recommendation system:</b> Alternate least Squares implemented in python- Numpy library" +
+        "\n Environment: Spark, Python, Hadoop, HDFS, Map Reduce ";
       break;
     }
     case "proj5": {
-      divcontent = " text for proj 5 in switch ";
+      divcontent =
+        " TraderIn website: E-commerce website to buy and sell the used and new vehicles \n" +
+        "Environment: LAMP Stack, PHP – Laravel ORM, HTML, CSS, Bootstrap, MariaDB, jQuery, JavaScript";
       break;
     }
   }

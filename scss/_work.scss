@@ -8,13 +8,13 @@
   bottom: 0;
   left: 0;
   z-index: 2;
-  width: 50vh;
-  height: 30vh;
-  color: set-text-color($primary-color);
+  width: 40vh;
+  height: 20vh;
+  color: set-text-color(#fff);
 
   //transition: all 5s;
   @include easeOut;
-  background: rgba(lighten($primary-color, 2), 0.8);
+  background: rgba(lighten($primary-color, 2), 0.3);
   border: 1px solid #111;
   border-radius: 10px;
   visibility: hidden;

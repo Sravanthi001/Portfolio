@@ -11,6 +11,7 @@ const blur = document.querySelector(".blur");
 const projdesc = document.querySelectorAll(".projdesc");
 const projbtn = document.querySelectorAll(".btn-light");
 const pdesc_exp = document.querySelector(".centerdiv");
+var cls_btn = document.querySelector(".cls-btn");
 let showpdesc = false;
 
 /*projbtn.forEach(item => {
@@ -24,6 +25,12 @@ document.querySelectorAll(".btn-light").forEach(function(elem) {
   });
   console.log(elem.id);
 });
+
+if (cls_btn) {
+  cls_btn.addEventListener("click", function() {
+    btnclose();
+  });
+}
 //Set Initial State of menu
 let showMenu = false;
 
@@ -53,49 +60,62 @@ function toggleMenu() {
 }
 
 function projdesc_visable(id) {
-  console.log(id);
+  console.log(showpdesc);
   var divcontent = "";
   descDiv = document.getElementById("descdiv");
-  switch (id) {
-    case "proj1": {
-      divcontent =
-        " Tourism Slack: Full Stack Website similar to slack; GitHub & gravatar integration, bot commands, re-captcha API" +
-        "Environment: WAMP Server, PHP, HTML, CSS, jQuery, JavaScript, Bootstrap, MySQL";
-      break;
-    }
-    case "proj2": {
-      divcontent =
-        " Voice Controlled light system:" +
-        "light system controlled using voice commands and SMS \n Environment: Arduino UNO R3, 1Sheeld";
-      break;
-    }
-    case "proj3": {
-      divcontent =
-        " Designed and developed a web page which gives the user the interactive interface which allows the user to" +
-        "visualize data based on popular programming languages and user account type \n Environment: Tableau, D3.js, HTML, CSS and JavaScrip";
-      break;
-    }
-    case "proj4": {
-      divcontent =
-        " <b> Movie recommendation system:</b> Alternate least Squares implemented in python- Numpy library" +
-        "\n Environment: Spark, Python, Hadoop, HDFS, Map Reduce ";
-      break;
-    }
-    case "proj5": {
-      divcontent =
-        " TraderIn website: E-commerce website to buy and sell the used and new vehicles \n" +
-        "Environment: LAMP Stack, PHP – Laravel ORM, HTML, CSS, Bootstrap, MariaDB, jQuery, JavaScript";
-      break;
-    }
-  }
+  console.log("close button ");
   if (!showpdesc) {
+    console.log("close button inside if ");
+    switch (id) {
+      case "proj1": {
+        divcontent =
+          " Tourism Slack: Full Stack Website similar to slack; GitHub & gravatar integration, bot commands, re-captcha API" +
+          "Environment: WAMP Server, PHP, HTML, CSS, jQuery, JavaScript, Bootstrap, MySQL";
+        break;
+      }
+      case "proj2": {
+        divcontent =
+          " Voice Controlled light system:" +
+          "light system controlled using voice commands and SMS \n Environment: Arduino UNO R3, 1Sheeld";
+        break;
+      }
+      case "proj3": {
+        divcontent =
+          " Designed and developed a web page which gives the user the interactive interface which allows the user to" +
+          "visualize data based on popular programming languages and user account type \n Environment: Tableau, D3.js, HTML, CSS and JavaScrip";
+        break;
+      }
+      case "proj4": {
+        divcontent =
+          " <b> Movie recommendation system:</b> Alternate least Squares implemented in python- Numpy library" +
+          "\n Environment: Spark, Python, Hadoop, HDFS, Map Reduce ";
+        break;
+      }
+      case "proj5": {
+        divcontent =
+          " TraderIn website: E-commerce website to buy and sell the used and new vehicles \n" +
+          "Environment: LAMP Stack, PHP – Laravel ORM, HTML, CSS, Bootstrap, MariaDB, jQuery, JavaScript";
+        break;
+      }
+    }
+
     pdesc_exp.classList.add("show");
+
+    // cls_btn.classList.add("show");
+
     blur.classList.add("blur_extra");
 
     descDiv.innerHTML = divcontent;
+
     showpdesc = true;
-  } else {
+  }
+}
+
+function btnclose() {
+  if (showpdesc) {
+    console.log("in else close button ");
     pdesc_exp.classList.remove("show");
+    // cls_btn.classList.remove("show");
     blur.classList.remove("blur_extra");
     showpdesc = false;
   }

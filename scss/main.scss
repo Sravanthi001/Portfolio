@@ -43,7 +43,8 @@ h3 {
 }
 
 .blur_extra {
-  filter: blur(15px);
+  filter: blur(10px);
+  filter: opacity(1%);
   background-size: cover;
 }
 
@@ -85,6 +86,9 @@ header {
 
 main {
   padding: 3rem;
+  &#home {
+    min-height: calc(100vh - 5px);
+  }
   //height: 100%;
   min-height: calc(100vh - 30px);
   .icons {

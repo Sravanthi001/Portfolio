@@ -1,7 +1,9 @@
 @import "config";
+
 .centerdiv {
-  position: absolute;
+  position: fixed;
   margin: auto;
+  min-height: fit-content;
   transform: scale(0.1);
   top: 0;
   right: 0;
@@ -10,7 +12,7 @@
   z-index: 2;
   width: 40vh;
   height: 20vh;
-  color: set-text-color(#fff);
+  color: set-text-color(#000);
 
   //transition: all 5s;
   @include easeOut;
@@ -21,6 +23,18 @@
 
   &.show {
     visibility: visible;
+    position: fixed;
     transform: scale(1.6);
   }
+}
+
+.cls-btn {
+  position: absolute;
+  background: red;
+  border-radius: 50%;
+  z-index: 10;
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  right: 5px;
 }

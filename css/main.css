@@ -116,8 +116,9 @@
   margin: 5px;
 }*/
 .centerdiv {
-  position: absolute;
+  position: fixed;
   margin: auto;
+  min-height: fit-content;
   transform: scale(0.1);
   top: 0;
   right: 0;
@@ -126,7 +127,7 @@
   z-index: 2;
   width: 40vh;
   height: 20vh;
-  color: #000;
+  color: #fff;
   transition: all 0.7s ease-out;
   background: rgba(73, 73, 73, 0.3);
   border: 1px solid #111;
@@ -134,7 +135,18 @@
   visibility: hidden; }
   .centerdiv.show {
     visibility: visible;
+    position: fixed;
     transform: scale(1.6); }
+
+.cls-btn {
+  position: absolute;
+  background: red;
+  border-radius: 50%;
+  z-index: 10;
+  height: 20px;
+  width: 20px;
+  top: 5px;
+  right: 5px; }
 
 * {
   box-sizing: border-box; }
@@ -163,15 +175,16 @@ body {
         background: rgba($primary-color, $background-opacity);
       }*/ }
   body .overlay {
+    overflow-x: auto;
     top: 0;
     right: 0;
     width: 100wh;
     height: 100%;
     min-width: fit-content;
     min-height: fit-content;
-    z-index: -1;
+    z-index: -2;
     background-size: cover;
-    background: rgba(68, 68, 68, 0.7); }
+    background: rgba(68, 68, 68, 0.75); }
   body#abt-img {
     background: url(../img/aboutmebackground.jpg);
     background-attachment: fixed;
@@ -211,7 +224,8 @@ h3 {
   background-size: auto; }
 
 .blur_extra {
-  filter: blur(15px);
+  filter: blur(10px);
+  filter: opacity(1%);
   background-size: cover; }
 
 a {
@@ -240,6 +254,8 @@ header {
 main {
   padding: 3rem;
   min-height: calc(100vh - 30px); }
+  main#home {
+    min-height: calc(100vh - 5px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -381,7 +397,10 @@ main {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  .centerdiv.show {
+    position: fixed;
+    transform: scale(1.2); } }
 
 @media screen and (max-width: 500px) {
   .projects {
@@ -389,8 +408,12 @@ main {
   #home h1 {
     margin-top: 15vh; }
   h1.lg-heading {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-top: 3rem;
     margin-bottom: 2rem; }
   main {
-    padding: 20px; } }
+    padding: 20px; }
+  body#abt-img {
+    background: url(../img/aboutmemobile1.jpg); }
+  .boxes div {
+    font-size: 1.5rem; } }

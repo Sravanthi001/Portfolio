@@ -170,6 +170,7 @@
   position: fixed;
   margin: auto;
   min-height: fit-content;
+  text-align: center;
   transform: scale(0.1);
   top: 0;
   right: 0;
@@ -178,6 +179,7 @@
   z-index: 2;
   width: 40vh;
   height: 20vh;
+  padding: 10px 7px;
   color: #fff;
   transition: all 0.7s ease-out;
   background: rgba(32, 84, 98, 0.88);
@@ -245,6 +247,8 @@ body {
     background-attachment: fixed;
     background-size: cover;
     margin: 5px; }
+    body#work-img .overlay {
+      background: rgba(68, 68, 68, 0.4); }
   body#cnct-img {
     background: url(../img/contactbg.jpg);
     background-attachment: fixed;
@@ -259,7 +263,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem; }
+    font-size: 7rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -275,8 +279,7 @@ h3 {
   background-size: auto; }
 
 .blur_extra {
-  filter: blur(10px);
-  filter: opacity(1%);
+  visibility: hidden;
   background-size: cover; }
 
 a {
@@ -472,7 +475,7 @@ main {
   main {
     padding: 20px; }
   body#abt-img {
-    background: url(../img/aboutmemobile.jpg); }
+    background: url(../img/aboutmemobile2.jpg); }
     body#abt-img .overlay {
       left: 0;
       bottom: 0px;

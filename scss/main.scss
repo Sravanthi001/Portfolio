@@ -152,9 +152,12 @@ main {
   }
 
   .job {
-    background: lighten($primary-color, 5);
+    background: (lighten($primary-color, 10), 0.1);
     padding: 0.5rem;
+    border-radius: 5%;
+
     border-bottom: $secondary-color 5px solid;
+    border-top: #000 5px solid;
     h5 {
       margin: 8px 0;
     }
@@ -169,11 +172,16 @@ main {
 
   img {
     width: 100%;
-    border: 3px #fff solid;
-
+    border: 3px rgb(11, 2, 54) solid;
+    border-radius: 16px;
+    opacity: 0.85;
+    //transform: perspective(100%);
+    transform: perspective(1150px) rotateY(43deg);
     &:hover {
-      opacity: 0.5;
+      opacity: 0.95;
+      border-radius: 25px;
       border-color: $secondary-color;
+      transform: perspective(1000px) rotateY(20deg);
       @include easeOut;
     }
   }

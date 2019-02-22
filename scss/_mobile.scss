@@ -107,6 +107,13 @@
 
   body#abt-img {
     background: $about-image-mobile;
+
+    .overlay {
+      // position: fixed;
+      left: 0;
+      bottom: 0px;
+      width: 400px;
+    }
   }
   .boxes {
     div {

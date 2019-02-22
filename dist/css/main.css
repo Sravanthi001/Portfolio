@@ -6,6 +6,23 @@
   z-index: 5;
   margin: 5px;
 }*/
+#vid1 {
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 2px;
+  z-index: -3; }
+  #vid1 video {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.25;
+    filter: contrast(100%) brightness(100%) saturate(100%); }
+
 /*
 #work-img {
   background: $work-image;
@@ -14,6 +31,23 @@
   z-index: 5;
   margin: 5px;
 }*/
+#vid1 {
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 2px;
+  z-index: -3; }
+  #vid1 video {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.25;
+    filter: contrast(100%) brightness(100%) saturate(100%); }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -115,6 +149,23 @@
   z-index: 5;
   margin: 5px;
 }*/
+#vid1 {
+  position: absolute;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 2px;
+  z-index: -3; }
+  #vid1 video {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.25;
+    filter: contrast(100%) brightness(100%) saturate(100%); }
+
 .centerdiv {
   position: fixed;
   margin: auto;
@@ -129,7 +180,7 @@
   height: 20vh;
   color: #fff;
   transition: all 0.7s ease-out;
-  background: rgba(73, 73, 73, 0.3);
+  background: rgba(32, 84, 98, 0.88);
   border: 1px solid #111;
   border-radius: 10px;
   visibility: hidden; }
@@ -178,19 +229,19 @@ body {
     overflow-x: auto;
     top: 0;
     right: 0;
-    width: 100wh;
+    width: 100%;
     height: 100%;
     min-width: fit-content;
     min-height: fit-content;
     z-index: -2;
     background-size: cover;
-    background: rgba(68, 68, 68, 0.75); }
+    background: rgba(68, 68, 68, 0.25); }
   body#abt-img {
-    background: url(../img/aboutmebackground.jpg);
+    background: url(../img/aboutmefairy.jpg);
     background-attachment: fixed;
     background-size: cover; }
   body#work-img {
-    background: url(../img/workbg.jpg);
+    background: url(../img/workbg1.jpg);
     background-attachment: fixed;
     background-size: cover;
     margin: 5px; }
@@ -292,9 +343,11 @@ main {
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
-    background: #515151;
+    background: #5e5e5e, 0.1;
     padding: 0.5rem;
-    border-bottom: #fc320a 5px solid; }
+    border-radius: 5%;
+    border-bottom: #fc320a 5px solid;
+    border-top: #000 5px solid; }
     .about-info .job h5 {
       margin: 8px 0; }
 
@@ -304,10 +357,15 @@ main {
   grid-template-columns: repeat(3, 1fr); }
   .projects img {
     width: 100%;
-    border: 3px #fff solid; }
+    border: 3px #0b0236 solid;
+    border-radius: 16px;
+    opacity: 0.85;
+    transform: perspective(1150px) rotateY(43deg); }
     .projects img:hover {
-      opacity: 0.5;
+      opacity: 0.95;
+      border-radius: 25px;
       border-color: #fc320a;
+      transform: perspective(1000px) rotateY(20deg);
       transition: all 0.7s ease-out; }
 
 .boxes {
@@ -414,6 +472,10 @@ main {
   main {
     padding: 20px; }
   body#abt-img {
-    background: url(../img/aboutmemobile1.jpg); }
+    background: url(../img/aboutmemobile.jpg); }
+    body#abt-img .overlay {
+      left: 0;
+      bottom: 0px;
+      width: 400px; }
   .boxes div {
     font-size: 1.5rem; } }

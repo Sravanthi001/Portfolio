@@ -43,8 +43,9 @@ h3 {
 }
 
 .blur_extra {
-  filter: blur(10px);
-  filter: opacity(1%);
+  // filter: blur(10px);
+  //filter: opacity(1%);
+  visibility: hidden;
   background-size: cover;
 }
 

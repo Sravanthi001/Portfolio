@@ -67,6 +67,9 @@ $background-opacity: 0.25;
       background-attachment: fixed;
       background-size: cover;
       margin: 5px;
+      .overlay {
+        background: rgba($primary-color, 0.4);
+      }
     }
     &#cnct-img {
       background: $contact-image;
